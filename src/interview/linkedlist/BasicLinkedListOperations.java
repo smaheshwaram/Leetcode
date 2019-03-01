@@ -1,5 +1,10 @@
 package interview.linkedlist;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
+
 public class BasicLinkedListOperations {
     Node head = null;
 
@@ -9,6 +14,13 @@ public class BasicLinkedListOperations {
 
         Node(int val) {
             this.val = val;
+        }
+    }
+
+    static class ListValComparator implements Comparator<Node> {
+        @Override
+        public int compare(Node n1, Node n2) {
+            return n1.val - n2.val;
         }
     }
 
@@ -29,8 +41,8 @@ public class BasicLinkedListOperations {
         basicLinkedListOperations.printLinkedList(head);
 
         //insert new node
-        System.out.println("Inserting new node: ");
-        head = basicLinkedListOperations.insertNewNode(head, 12);
+//        System.out.println("Inserting new node: ");
+//        head = basicLinkedListOperations.insertNewNode(head, 12);
 
         System.out.println("Inserting new node in the middle of the list: ");
         basicLinkedListOperations.insertNewNodeInTheMiddleOfList(head, 15, 21);
@@ -54,10 +66,20 @@ public class BasicLinkedListOperations {
         basicLinkedListOperations.printLinkedList(head2);
 
         //Sorting list 1
-//        System.out.println("Sorting list 1:  ");
-//        LinkedList<Node> list1 = new LinkedList<>();
-//        Collections.sort(list1)
+        System.out.println("Sorting list 1:  ");
+        List<Node> list1 = new LinkedList<>();
+        Node x = head;
+        list1.add(head);
+        while(x.next != null) {
+            x = x.next;
+            list1.add(x);
+        }
+        Collections.sort(list1, new ListValComparator());
+        for(Node i: list1) {
+            System.out.println(i.val);
+        }
 
+        /* Make sure linked lists which are passing should be sorted */
         System.out.println("Merging two lists:  ");
         Node temp1 = basicLinkedListOperations.mergeTwoLists(head, head2);
         basicLinkedListOperations.printLinkedList(temp1);
