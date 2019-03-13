@@ -3,7 +3,7 @@ package leetcodeeasy;
 public class CheckPrimeNumber {
     public static void main(String[] args) {
         CheckPrimeNumber checkPrimeNumber = new CheckPrimeNumber();
-        checkPrimeNumber.isPrime(49);
+        System.out.println("Is prime: " + checkPrimeNumber.isPrime(15));
     }
     private boolean isPrime(int n) {
         if (n < 2) { return false; }

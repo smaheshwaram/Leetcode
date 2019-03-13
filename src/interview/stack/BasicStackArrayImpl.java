@@ -1,7 +1,5 @@
 package interview.stack;
 
-import java.util.Stack;
-
 public class BasicStackArrayImpl {
     private static final int MAX = 1000;
     int top;
