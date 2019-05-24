@@ -5,7 +5,7 @@ public class Fibonacci {
     public static void main(String[] args) {
         Fibonacci fibonacci = new Fibonacci();
 
-        //print fibonacci upto 100 elements
+        //print fibonacci below 100
         fibonacci.printFibonacci(100);
 
         //calling recursive fibonacci
