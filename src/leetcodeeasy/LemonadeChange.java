@@ -41,14 +41,12 @@ public class LemonadeChange {
         for(int i=0; i<bills.length; i++) {
             if (!map.containsKey(bills[i])) {
                 map.put(bills[i], 1);
-                if (!check(bills[i], map)) {
-                    return false;
-                }
             } else {
                 map.put(bills[i], map.get(bills[i]) + 1);
-                if (!check(bills[i], map)) {
-                    return false;
-                }
+            }
+
+            if (!check(bills[i], map)) {
+                return false;
             }
 
         }
