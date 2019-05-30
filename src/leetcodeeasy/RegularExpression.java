@@ -1,12 +1,32 @@
 package leetcodeeasy;
+/*
+
+Regular Expression	Description
+\d   Any digit, short for [0-9]
+
+\D  A non-digit, short for [^0-9]
+
+\s  A whitespace character, short for [ \t\n\x0b\r\f]
+
+\S  A non-whitespace character, short for
+
+\w  A word character, short for [a-zA-Z_0-9]
+
+\W  A non-word character [^\w]
+
+\S+  Several non-whitespace characters
+
+\b  Matches a word boundary where a word character is [a-zA-Z0-9_]
+
+ */
 
 public class RegularExpression {
 
     public static void main(String[] args) {
         //replaces repeating character with *
         String s = "21113122";
-        String s1 = s.replaceAll("(\\d)\\1+", "*");
-        System.out.println(s1);
+        s = s.replaceAll("(\\d)\\1+", "*");
+        System.out.println(s.length());
 
         //replacing all special characters with ""
         String s2 = "d4g_s;ryu9*&l";
