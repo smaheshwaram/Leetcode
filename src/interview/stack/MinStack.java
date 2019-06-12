@@ -29,6 +29,10 @@ public class MinStack {
         }
     }
 
+    public int top() {
+        return stack.peek();
+    }
+
     private void push(int x) {
         if (x <= min) {
             stack.push(min);
