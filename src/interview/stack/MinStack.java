@@ -11,8 +11,8 @@ public class MinStack {
         minStack.push(5);
         minStack.push(12);
         minStack.push(8);
-        minStack.push(6);
         minStack.push(3);
+        minStack.push(6);
 
         minStack.pop();
 
